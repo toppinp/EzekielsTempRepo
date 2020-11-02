@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjectStep10.Models;
 
+// This is just an example statement to show how to use Git.
 namespace ProjectStep10.Controllers
 {
     public class HomeController : Controller
