@@ -1,0 +1,159 @@
+﻿@model ProjectStep10.Models.Account
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Ezekiel's Cafe </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body class="bg-success">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index"> Home </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="LogIn"> Log In </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Order"> Order </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Events"> Events </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Cart"> Cart </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 align="center" class="header">Ezekiel's Cafe</h1>
+        <form method="post">
+            <div asp-validation-summary="All">
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <table>
+                        <tr>
+                            <td>
+                                Name:
+                            </td>
+                            <td colspan="2">
+                                <input asp-for="name" placeholder="Full Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Email Address:
+                            </td>
+                            <td colspan="2">
+                                <input asp-for="email" placeholder="Email Address">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Password:
+                            </td>
+                            <td colspan="2">
+                                <input type="password" asp-for="password" placeholder="Password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Re-Enter Password:
+                            </td>
+                            <td colspan="2">
+                                <input type="password" asp-for="confirmPassword" placeholder="Password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Street Address:
+                            </td>
+                            <td colspan="2">
+                                <input asp-for="streetAddress" placeholder="Street Address">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                City:
+                            </td>
+                            <td colspan="2">
+                                <input asp-for="city" placeholder="City">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Phone Number:
+                            </td>
+                            <td colspan="2">
+                                <input asp-for="phone" placeholder="Your Number">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="center">
+                                <button>Sign-In</button>
+                            </td>
+                            <td align="center">
+                                <input type="submit" value="Register" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br>
+                                <br>
+                            </td>
+                            <td colspan="2" align="center">
+                                <button style="font-size:14px;">Update User Information</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br>
+                                <br>
+                            </td>
+                            <td colspan="2" align="center">
+                                <button style="font-size:14px;">  Forgot Password  </button>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="col-md-6">
+                    <br />
+                    <br />
+                    <img src="..\images\Beans and Cup.jpg" default="coffee image" height="500" width="500">
+                </div>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>

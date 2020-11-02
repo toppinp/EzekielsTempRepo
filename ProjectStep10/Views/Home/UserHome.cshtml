@@ -1,0 +1,80 @@
+﻿@model ProjectStep10.Models.Account
+
+@{
+    Layout = null;
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Ezekiel's Cafe </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body class="background-img">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Login"> Log In </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Register"> Register </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Order"> Order </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Events"> Events </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Cart"> Cart </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 align="center" class="header">Ezekiel's Cafe</h1>
+        <h2 align="center" class="header">Welcome @Model.name!</h2>
+        <div class="calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=aXQxbnFhazhkdDVkbTBkbXA5djZzOW1tNDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23C0CA33&amp;color=%23E67C73&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=1&amp;mode=MONTH"
+                    style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+
+    <div class="text-white">
+        userId: @Model.userId
+        <br />
+        name: @Model.name
+        <br />
+        phone: @Model.phone
+        <br />
+        streetAddress: @Model.streetAddress
+        <br />
+        city: @Model.city
+        <br />
+        email: @Model.email
+        <br />
+        password: @Model.password
+        <br />
+    </div>
+
+    <button class="text-black-50"><a asp-controller="Home" asp-action="EditAccount"> Edit </a></button>
+    <button> Delete </button>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿body {
+}
+
+.background-img {
+    background-image: url(https://th.bing.com/th/id/OIP.48rEiGiAu9QbjcdpR_mDKwHaEo?pid=Api&rs=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 50px;
+}
+
+.header {
+    color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.calendar {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+}
